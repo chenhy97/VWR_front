@@ -1,0 +1,69 @@
+{
+  "name": "spigo-front",
+  "version": "0.9.0",
+  "author": "Kristofer Ljungros",
+  "license": "ISC",
+  "description": "spigo-front",
+  "repository": "https://github.com/chenhy97/spigo_front",
+  "scripts": {
+    "test": "",
+    "webpack": "webpack",
+    "dev": "webpack-dev-server --open --hot --host=0.0.0.0 --port=8000"
+  },
+  "babel": {
+    "presets": [
+      [
+        "env",
+        {
+          "modules": false
+        }
+      ],
+      "stage-2"
+    ]
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ],
+  "devDependencies": {
+    "admin-lte": "^2.4.9",
+    "autoprefix": "1.0.1",
+    "axios": "^0.17.1",
+    "babel-core": "6.26.0",
+    "babel-loader": "7.1.2",
+    "babel-preset-env": "1.6.1",
+    "babel-preset-stage-2": "6.24.1",
+    "bootstrap-vue": "^2.0.0-rc.14",
+    "clean-webpack-plugin": "0.1.18",
+    "copy-webpack-plugin": "4.4.1",
+    "css-loader": "0.28.9",
+    "extract-text-webpack-plugin": "3.0.2",
+    "file-loader": "1.1.6",
+    "html-webpack-plugin": "2.30.1",
+    "less": "3.0.1",
+    "less-loader": "4.0.5",
+    "optimize-css-assets-webpack-plugin": "3.2.0",
+    "postcss": "6.0.19",
+    "postcss-loader": "2.1.0",
+    "precss": "3.1.0",
+    "qs": "^6.6.0",
+    "style-loader": "0.20.2",
+    "uglifyjs-webpack-plugin": "1.2.0",
+    "url-loader": "0.6.2",
+    "vue-loader": "14.1.1",
+    "vue-template-compiler": "2.5.13",
+    "webpack": "3.11.0",
+    "webpack-dev-server": "2.11.1"
+  },
+  "dependencies": {
+    "@tweenjs/tween.js": "17.2.0",
+    "babel-polyfill": "6.26.0",
+    "boostrap": "^2.0.0",
+    "underscore": "1.8.3",
+    "vizceral": "4.5.5",
+    "vue": "2.5.13",
+    "vue-router": "3.0.1",
+    "vuex": "3.0.1"
+  }
+}

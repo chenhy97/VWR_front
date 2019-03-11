@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="VueVizceral" />
+    <title>VueVizceral</title>
+    <script src="<%= htmlWebpackPlugin.files.chunks.polyfills.entry %>"></script>
+    <link rel="shortcut icon" href="<%= htmlWebpackPlugin.files.favicon %>">
+    <% for (key in htmlWebpackPlugin.files.css) { %>
+    <link rel="stylesheet" href="<%= htmlWebpackPlugin.files.css[key] %>">
+    <% } %>
+</head>
+<body>
+    <div id="app"></div>
+    <script src="<%= htmlWebpackPlugin.files.chunks.vendor.entry %>"></script>
+    <script src="<%= htmlWebpackPlugin.files.chunks.app.entry %>"></script>
+</body>
+</html>
