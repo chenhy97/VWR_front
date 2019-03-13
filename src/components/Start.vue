@@ -114,6 +114,7 @@
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                                     <button type="button" class="btn btn-primary">Save changes</button>
+                                    <p>{{info}}</p>
                                 </div>
                             </div>
                         </div>
@@ -123,7 +124,14 @@
         </div>        
         <!-- /.box-body -->
         <div class="box-footer">
-            <button v-on:click="submitForm($event)" class="btn btn-primary">Submit</button>
+            <div class="row">
+                <section class="col-md-6" >
+                    <button v-on:click="submitForm($event)" class="btn btn-primary">Submit</button>
+                </section>
+                <section class="col-md-6">
+                    <button v-on:click="ExitSubmit($event)" class="btn btn-primary">Exit</button>
+                </section>
+            </div>
         </div>
     </form>
 </div>
@@ -155,12 +163,18 @@
                 cpuprofile:'',
                 confFile:'',
                 saveConfFile:'fasle',
+                info:'hahahha',
             }
         },
         methods:{
             getFile(event) {
                 this.file = event.target.files[0];
                 console.log(this.file);
+            },
+            ExitSubmit(event){
+                this.$ajax.post('http://127.0.0.1:8080/exit').then(
+                    console.log("Bye")
+                )
             },
             submitForm(event) {
                 event.preventDefault();
@@ -187,7 +201,7 @@
                 formData.append('cpuprofile',this.cpuprofile)
                 formData.append('config',this.confFile)
                 formData.append('saveconfig',this.saveConfFile)
-
+                
                 // var params = qs.stringify({
                 //     a:this.arch,
                 //     file:this.file
@@ -195,13 +209,17 @@
                 let config = {
                     headers: {
                         'Content-Type': 'multipart/form-data',
-                        'Accept': 'application/json'
+                        'Accept': 'application/json',
+                        'Access-Control-Allow-Origin':'*',
+                        'Access-Control-Allow-Methods':'POST',
+                       "Access-Control-Allow-Headers":"Authorization,Origin, X-Requested-With, Content-Type, Accept"
                     }
                 }
                 this.$ajax.post('http://127.0.0.1:8080/start', formData, config).then(function (response) {
-                    if (response.status === 200) {
+                    // if (response.status === 200) {
                         console.log(response.data);
-                    }
+                        response => (this.info = response.body);
+                    // }
                 })
             }
         }

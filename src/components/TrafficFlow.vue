@@ -112,6 +112,7 @@ export default {
       self.setTraffic({ nodes: [], connections: [] });
       http.get("/static/sample_data.json").then(result => {
         self.traffic.clientUpdateTime = Date.now();
+        console.log(result)
         self.updateData(result.data);
       });
     },

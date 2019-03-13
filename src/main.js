@@ -52,6 +52,7 @@ import axios from 'axios' //引入axios
 import qs from 'qs'
 
 Vue.prototype.$ajax=axios //修改Vue的原型属性
+// Vue.http.options.emulateJSON = true;
 Vue.use(VizceralVue);
 Vue.use(BootstrapVue);
 

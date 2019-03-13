@@ -77,8 +77,11 @@ export default {
   },
   mounted() {
 
-    if (this.vizceral) return;
-
+    if (this.vizceral) {
+      console.log("rrr")
+      return;
+    }
+    console.log("rrrttttt")
     this.vizceral = new VizceralGraph(
       this.$refs.vizCanvas,
       this.targetFramerate
