@@ -1,4 +1,4 @@
-# Spigo-front
+# VWR-front
 Vue.js application for vizceral: https://github.com/Netflix/vizceral
 
 Based on the React vizceral example: https://github.com/Netflix/vizceral-example
@@ -11,11 +11,11 @@ For more details about **vue.js**: https://vuejs.org
 Get, install, and run example server.
 1. Get source
 ```
-git clone https://github.com/chenhy97/spigo_front.git
+git clone https://github.com/chenhy97/vwr_front.git
 ```
 2. Go to dir
 ```
-cd spigo_front
+cd vwr_front
 ```
 3. Install dependencies
 ```
