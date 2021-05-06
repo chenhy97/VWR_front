@@ -60,7 +60,7 @@
     "@tweenjs/tween.js": "17.2.0",
     "babel-polyfill": "6.26.0",
     "boostrap": "^2.0.0",
-    "underscore": "1.8.3",
+    "underscore": "1.12.1",
     "vizceral": "4.5.5",
     "vue": "2.5.13",
     "vue-router": "3.0.1",
